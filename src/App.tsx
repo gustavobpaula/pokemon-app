@@ -4,6 +4,7 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 import { getPokemonList } from "./services/getPokemonList";
+import { getPokemon } from "./services/getPokemon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,14 @@ function App() {
       })
       .catch((error) => {
         console.error("Error fetching Pokémon list:", error);
+      });
+
+    getPokemon({ name: "pikachu" })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching Pokémon:", error);
       });
   }, []);
 

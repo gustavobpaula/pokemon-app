@@ -1,4 +1,7 @@
 export type PokemonModel = {
   name: string;
-  sprite: string | null;
+  sprite: {
+    front: string | null;
+    back: string | null;
+  };
 };
