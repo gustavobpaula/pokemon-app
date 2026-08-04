@@ -1,4 +1,4 @@
-export interface MovesEntity {
+export interface MoveEntity {
   id: number;
   name: string;
   accuracy: number;

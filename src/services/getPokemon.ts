@@ -1,5 +1,5 @@
 import type { PokemonEntity } from "../entities";
-import { mapPokemon } from "../mappers/mapPokemon";
+import { mapPokemon } from "../mappers";
 import type { PokemonModel } from "../models";
 import { BASE_URL } from "./core/config";
 import { request } from "./core/request";
@@ -19,9 +19,6 @@ export const getPokemon = async (
   const response = await request<PokemonEntity>({
     method: "GET",
     url: `${BASE_URL}/pokemon/${params.name}`,
-    query: {
-      limit: 2000,
-    },
   });
 
   return mapPokemon(response);

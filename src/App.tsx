@@ -3,8 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import { getPokemonList } from "./services/getPokemonList";
-import { getPokemon } from "./services/getPokemon";
+import { getPokemonList, getPokemon, getAttack } from "./services";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +23,14 @@ function App() {
       })
       .catch((error) => {
         console.error("Error fetching Pokémon:", error);
+      });
+
+    getAttack({ name: "thunder-shock" })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching Attack:", error);
       });
   }, []);
 

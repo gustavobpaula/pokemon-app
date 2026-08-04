@@ -1,5 +1,5 @@
 import type { PokemonListEntity } from "../entities";
-import { mapPokemonList } from "../mappers/mapPokemonList";
+import { mapPokemonList } from "../mappers";
 import type { PokemonListModel } from "../models";
 import { BASE_URL } from "./core/config";
 import { request } from "./core/request";
