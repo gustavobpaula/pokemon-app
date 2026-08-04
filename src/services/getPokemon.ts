@@ -1,6 +1,6 @@
-import type { PokemonEntity } from "../entities";
-import { mapPokemon } from "../mappers";
-import type { PokemonModel } from "../models";
+import type { PokemonEntity } from "@/entities";
+import { mapPokemon } from "@/mappers";
+import type { PokemonModel } from "@/models";
 import { BASE_URL } from "./core/config";
 import { request } from "./core/request";
 

@@ -2,6 +2,7 @@ import type { PokemonModel } from "../models";
 
 /**
  * Selects a random attack from a Pokémon.
+ *
  * @param moves - The list of moves of the Pokémon.
  * @returns
  */

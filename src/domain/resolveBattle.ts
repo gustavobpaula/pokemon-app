@@ -10,6 +10,15 @@ export type BattleResult = {
   message: string;
 };
 
+/**
+ * Resolves a battle by comparing the attack power of both fighters.
+ *
+ * @param params - The fighters participating in the battle.
+ * @param params.player - The fighter controlled by the player.
+ * @param params.opponent - The opposing fighter.
+ * @returns The battle result, indicating either a winner or a draw, along with
+ * a descriptive message.
+ */
 export const resolveBattle = ({
   player,
   opponent,

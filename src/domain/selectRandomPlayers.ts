@@ -2,6 +2,7 @@ import type { PokemonListModel } from "../models";
 
 /**
  * Selects two random players from a list of Pokémon.
+ *
  * @param pokemonList
  * @returns
  */

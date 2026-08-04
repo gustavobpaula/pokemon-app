@@ -1,6 +1,6 @@
-import type { MoveEntity } from "../entities";
-import { mapAttack } from "../mappers";
-import type { AttackModel } from "../models";
+import type { MoveEntity } from "@/entities";
+import { mapAttack } from "@/mappers";
+import type { AttackModel } from "@/models";
 import { BASE_URL } from "./core/config";
 import { request } from "./core/request";
 

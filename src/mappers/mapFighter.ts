@@ -1,5 +1,5 @@
 import { kebabToTitleCase } from "@/utils";
-import type { AttackModel, FighterModel, PokemonModel } from "../models";
+import type { AttackModel, FighterModel, PokemonModel } from "@/models";
 
 type MapFighterProps = {
   pokemon: PokemonModel;

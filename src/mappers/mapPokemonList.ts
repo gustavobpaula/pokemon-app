@@ -1,5 +1,5 @@
-import type { PokemonListEntity } from "../entities";
-import type { PokemonListModel } from "../models";
+import type { PokemonListEntity } from "@/entities";
+import type { PokemonListModel } from "@/models";
 
 /**
  * Maps a Pokémon list entity to a Pokémon list model.

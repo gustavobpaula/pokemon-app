@@ -1,5 +1,5 @@
-import type { PokemonEntity } from "../entities";
-import type { PokemonModel } from "../models";
+import type { PokemonEntity } from "@/entities";
+import type { PokemonModel } from "@/models";
 
 /**
  * Maps a Pokémon entity to a Pokémon model.

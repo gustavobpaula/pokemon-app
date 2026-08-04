@@ -1,6 +1,6 @@
-import { selectRandomAttack, selectRandomPlayers } from "../domain";
-import { mapFighter } from "../mappers/mapFighter";
-import type { FighterModel, PokemonListModel } from "../models";
+import { selectRandomAttack, selectRandomPlayers } from "@/domain";
+import { mapFighter } from "@/mappers/mapFighter";
+import type { FighterModel, PokemonListModel } from "@/models";
 import { getAttack } from "./getAttack";
 import { getPokemon } from "./getPokemon";
 
@@ -11,7 +11,7 @@ type CreateFighterProps = {
 
 /**
  * Creates a FighterModel for a given Pokémon name.
- * @param name
+ * @param name - string name of the pokémon
  * @returns
  */
 export const createFighter = async ({

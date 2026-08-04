@@ -1,5 +1,5 @@
-import type { MoveEntity } from "../entities";
-import type { AttackModel } from "../models";
+import type { MoveEntity } from "@/entities";
+import type { AttackModel } from "@/models";
 
 /**
  * Maps a MoveEntity to an AttackModel.
