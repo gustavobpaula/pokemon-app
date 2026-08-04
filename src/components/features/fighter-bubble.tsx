@@ -40,6 +40,7 @@ export const FighterBubble = ({ fighter, loadingMode }: FighterBubbleProps) => {
   }
 
   const isPlayer = fighter.type === "player";
+  const imageSize = isPlayer ? "w-40 h-40" : "w-20 h-20";
 
   const renderBubble = () => (
     <Bubble variant={isPlayer ? "default" : "tinted"} className="flex-1">
@@ -53,12 +54,8 @@ export const FighterBubble = ({ fighter, loadingMode }: FighterBubbleProps) => {
   );
 
   const renderImage = () => (
-    <figure>
-      <img
-        src={fighter.image ?? ""}
-        alt={fighter.name}
-        className={isPlayer ? "w-40 h-auto" : "max-w-30 h-auto"}
-      />
+    <figure className={imageSize}>
+      <img src={fighter.image ?? ""} alt={fighter.name} className={imageSize} />
     </figure>
   );
 
