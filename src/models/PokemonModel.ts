@@ -4,4 +4,7 @@ export type PokemonModel = {
     front: string | null;
     back: string | null;
   };
+  moves: {
+    name: string;
+  }[];
 };

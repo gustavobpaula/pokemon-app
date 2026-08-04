@@ -13,5 +13,9 @@ export function mapPokemon(pokemon: PokemonEntity): PokemonModel {
       front: pokemon.sprites?.front_default || null,
       back: pokemon.sprites?.back_default || null,
     },
+    moves:
+      pokemon.moves?.map((move) => ({
+        name: move.move.name || "",
+      })) || [],
   };
 }

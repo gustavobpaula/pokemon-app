@@ -3,36 +3,33 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import { getPokemonList, getPokemon, getAttack } from "./services";
+import { useBattleStore } from "./store/useBattleStore";
 
 function App() {
   const [count, setCount] = useState(0);
+  const loadFighters = useBattleStore((state) => state.loadFighters);
+  const loading = useBattleStore((state) => state.loading);
+  const player = useBattleStore((state) => state.player);
+  const opponent = useBattleStore((state) => state.opponent);
 
   useEffect(() => {
-    getPokemonList()
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching Pokémon list:", error);
-      });
+    if (loading === "idle") {
+      loadFighters();
+    }
+  }, [loadFighters]);
 
-    getPokemon({ name: "pikachu" })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching Pokémon:", error);
-      });
+  useEffect(() => {
+    console.log("Player:", player);
+    console.log("Opponent:", opponent);
+  }, [player, opponent]);
 
-    getAttack({ name: "thunder-shock" })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching Attack:", error);
-      });
-  }, []);
+  if (loading === "loading") {
+    return <div>Loading fighters...</div>;
+  }
+
+  if (loading === "error") {
+    return <div>Error loading fighters. Please try again.</div>;
+  }
 
   return (
     <>
