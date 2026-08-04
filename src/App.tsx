@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useBattleStore } from "./store/useBattleStore";
-import { BattleArena } from "./components/features/battle-arena";
+import { BattleLog, BattleArena } from "./components/features";
 
 function App() {
   const loadFighters = useBattleStore((state) => state.loadFighters);
@@ -13,11 +13,10 @@ function App() {
   }, [loadFighters]);
 
   return (
-    <>
-      <section id="center" className="flex justify-center p-8">
-        <BattleArena />
-      </section>
-    </>
+    <main className="flex p-8 flex-col gap-4 items-center">
+      <BattleArena />
+      <BattleLog />
+    </main>
   );
 }
 

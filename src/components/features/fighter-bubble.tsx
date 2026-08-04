@@ -16,7 +16,7 @@ type FighterBubbleProps =
 export const FighterBubble = ({ fighter, loadingMode }: FighterBubbleProps) => {
   if (loadingMode) {
     const isPlayer = loadingMode === "player";
-    const imageSizeClass = isPlayer ? "w-40 h-40" : "w-20 h-20";
+    const imageSizeClass = isPlayer ? "w-40 h-40" : "w-25 h-25";
 
     return (
       <div className="flex items-center gap-4 w-full justify-between">
@@ -40,7 +40,7 @@ export const FighterBubble = ({ fighter, loadingMode }: FighterBubbleProps) => {
   }
 
   const isPlayer = fighter.type === "player";
-  const imageSize = isPlayer ? "w-40 h-40" : "w-20 h-20";
+  const imageSize = isPlayer ? "w-40 h-40" : "w-25 h-25";
 
   const renderBubble = () => (
     <Bubble variant={isPlayer ? "default" : "tinted"} className="flex-1">

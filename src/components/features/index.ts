@@ -1,3 +1,4 @@
 export * from "./battle-arena";
 export * from "./battle-controls";
 export * from "./fighter-bubble";
+export * from "./battle-log";

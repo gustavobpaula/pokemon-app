@@ -1,3 +1,4 @@
+import { kebabToTitleCase } from "@/utils";
 import type { AttackModel, FighterModel, PokemonModel } from "../models";
 
 type MapFighterProps = {
@@ -17,14 +18,14 @@ export function mapFighter({
   type,
 }: MapFighterProps): FighterModel {
   return {
-    name: pokemon.name || "",
+    name: kebabToTitleCase(pokemon.name) || "",
     image:
       type === "player"
         ? pokemon.sprite.back || null
         : pokemon.sprite.front || null,
     type,
     attack: {
-      name: attack.name || "",
+      name: kebabToTitleCase(attack.name) || "",
       power: attack.power || 0,
     },
     moves: pokemon.moves || [],
