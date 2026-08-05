@@ -14,7 +14,7 @@ export const BattleLog = () => {
         <Separator />
         <CardContent className="flex flex-col gap-8">
           <ul className="max-h-40 overflow-auto">
-            {logs.reverse().map((log, index) => (
+            {logs.map((log, index) => (
               <li key={index}>{`> ${log}`}</li>
             ))}
           </ul>
