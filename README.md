@@ -4,6 +4,10 @@ A small React application that uses the [PokéAPI](https://pokeapi.co/) to creat
 
 Each fighter receives a random move. When the user starts the battle, the application compares the moves' power values and records the outcome in a battle log.
 
+## Live demo
+
+[Play Pokémon Battle on Vercel](https://pokemon-9wjpqc0gc-gustavobpaulas-projects.vercel.app/)
+
 ## Features
 
 The core challenge requirements are implemented:
