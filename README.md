@@ -6,7 +6,7 @@ Each fighter receives a random move. When the user starts the battle, the applic
 
 ## Live demo
 
-[Play Pokémon Battle on Vercel](https://pokemon-9wjpqc0gc-gustavobpaulas-projects.vercel.app/)
+[Play Pokémon Battle on Vercel](https://pokemon-app-silk-delta.vercel.app/)
 
 ## Features
 
